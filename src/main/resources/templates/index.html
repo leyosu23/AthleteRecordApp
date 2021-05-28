@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Athlete info</title>
+</head>
+<body>
+<table>
+        <thead>
+         <tr>
+           <th></th>
+           <th></th>
+           <th></th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr th:each="dept:${athletes}">
+             <td th:text="${dept.AthleteId}">AthleteId</td>
+             <td th:text="${dept.AthleteName}">AthleteName</td>
+             <td th:text="${dept.ContactPerson}">ContactPerson</td> 
+               <td th:text="${dept.EMail}">EMail</td>
+             <td th:text="${dept.Age}">Age</td>
+             <td th:text="${dept.Height}">Height</td> 
+             <td th:text="${dept.BasketballSkill}">BasketballSkill</td> 
+             
+             <td><a th:href="@{/edit/{id}(id=${department.AthleteId})}">Update</a></td>
+             <td><a th:href="@{/delete/{id}(id=${department.AthleteId})}">Delete</a></td>
+          </tr>
+        </tbody>
+    </table>
+    
+    <p><a href="/stu">Add an Athlete</a></p>
+</body>
+</html>

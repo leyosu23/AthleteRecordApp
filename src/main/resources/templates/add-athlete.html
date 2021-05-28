@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Athlete</title>
+</head>
+<body>
+    <form action="#" th:action="@{/add}" th:object="${department}" method="post">
+    
+     <label for="AthleteId" ></label>
+     <input type="hidden" th:field="*{AthleteId}" id="AthleteId" placeholder="AthleteId">
+    <span th:if="${#fields.hasErrors('AthleteId')}" th:errors="*{AthleteId}"></span>
+    </br>
+    <label for="AthleteName">AthleteName</label>
+    <input type="text" th:field="*{AthleteName}" id="AthleteName" placeholder="AthleteName">
+    <span th:if="${#fields.hasErrors('AthleteName')}" th:errors="*{AthleteName}"></span>
+    </br>
+    <label for="ContactPerson">ContactPerson</label>
+    <input type="text" th:field="*{ContactPerson}" id="ContactPerson" placeholder="ContactPerson">
+    <span th:if="${#fields.hasErrors('ContactPerson')}" th:errors="*{ContactPerson}"></span>
+    </br>
+    
+    <label for="EMail">EMail</label>
+    <input type="text" th:field="*{EMail}" id="EMail" placeholder="EMail">
+    <span th:if="${#fields.hasErrors('EMail')}" th:errors="*{EMail}"></span>
+    </br>
+    <label for="Age">Age</label>
+    <input type="text" th:field="*{Age}" id="Age" placeholder="Age">
+    <span th:if="${#fields.hasErrors('Age')}" th:errors="*{Age}"></span>
+    </br>
+    <label for="Height">Height</label>
+    <input type="text" th:field="*{Height}" id="Height" placeholder="Height">
+    <span th:if="${#fields.hasErrors('Height')}" th:errors="*{Height}"></span>
+    </br>
+    <label for="BasketballSkill">BasketballSkill</label>
+    <input type="text" th:field="*{BasketballSkill}" id="BasketballSkill" placeholder="BasketballSkill">
+    <span th:if="${#fields.hasErrors('BasketballSkill')}" th:errors="*{BasketballSkill}"></span>
+    </br>
+    
+    
+    <input type="submit" value="Add Athlete">
+</form> 
+</body>
+</html>
